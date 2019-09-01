@@ -6,8 +6,8 @@
 // @description  -
 // @author       meatie
 // @match        https://pixelzone.io/*
-// @homepage     https://github.com/meatie-se/pixel-minimap
-// @updateURL    https://raw.githubusercontent.com/meatie-se/pixel-minimap/master/minimap_meatie.js
+// @homepage     https://github.com/pixelufpa/aglaziron
+// @updateURL    https://raw.githubusercontent.com/pixelufpa/aglaziron/master/minimap_meatie.js
 // @grant        none
 // ==/UserScript==
 /*Based on https://github.com/Pinkfloydd/ArgentinaMap_PixelZone
@@ -45,7 +45,7 @@ setCookie("baseTemplateUrl", "")
 */
 
 // Default location of template images and templates.json. Is user input and stored in a cookie.
-var baseTemplateUrl = 'https://raw.githubusercontent.com/meatie-se/pixel-minimap/master/'; //only as default
+var baseTemplateUrl = 'https://raw.githubusercontent.com/pixelufpa/aglaziron/master/'; //only as default
 var vers = "Minimap: meatie";
 var range = 6; //margin for showing the map window
 
