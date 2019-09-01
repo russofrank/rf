@@ -3,14 +3,14 @@
 // @name         Aga yeni bu
 // @namespace    http://tampermonkey.net/
 // @version      1.7.1
-// @description  -
+// @description  templer düzelcek
 // @author       meatie
 // @match        https://pixelzone.io/*
 // @homepage     https://github.com/pixelfixinit/TurkeyMap
 // @updateURL    https://raw.githubusercontent.com/pixelfixinit/TurkeyMap/master/minimap_meatie.js
 // @grant        none
 // ==/UserScript==
-/*Based on https://github.com/Pinkfloydd/ArgentinaMap_PixelZone
+/*Based on https://github.com/pixelfixinit/TurkeyMap
 
 Instructions
 
