@@ -37,7 +37,7 @@ setCookie("baseTemplateUrl", "")
 
 // Default location of template images and templates.json. Is user input and stored in a cookie.
 var baseTemplateUrl = 'https://raw.githubusercontent.com/russofrank/rf/master/'; //only as default
-var vers = "Minimap: meatie";
+var vers = "Minimap";
 var range = 6; //margin for showing the map window
 
 var x, y, zoomlevel, zooming_out, zooming_in, zoom_time, x_window, y_window, coorDOM, gameWindow;
