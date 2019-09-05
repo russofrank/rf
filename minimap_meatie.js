@@ -11,12 +11,28 @@
 // @grant        none
 // ==/UserScript==
 /*Based on https://github.com/pixelfixinit/TurkeyMap
-Instruçoes:
-Copiar e colar em novo script
-Teclas:
-+/- - Aumentar e diminuir o zoom.
-Q a G - Selecionar as cores da paleta
-X - Esconder os elementos do pixelzone
+Instructions
+Use Tampermonkey plugin to inject this into the game. Add a script, paste in the code.
+Images and the template list (templates.json) need to be on a https: server. Github is possibly
+the easiest option, if you get the Github windows client for updating it. Use Commit from your
+local folder, followed by "Push origin".
+Template images should be png, and must use the exact 16 palette colors. Bit depth does not matter.
+Transparent pngs are supported. Inexact colors will skip and spam the console.
+Path for the image is same as the json. But you can also give a full image URL to other sites.
+baseTemplateUrl is read from a cookie, and prompted for if missing. You don't need to edit this
+script to change it. Console:
+setCookie("baseTemplateUrl", "https://path-here/")
+Keys:
+Q-[ and A-G : select color
+H : Show and hide the minimap. This also reloads your template images after update.
++/- numpad: zoom minimap
+X : Hide one of three UI elements, per keypress. Top link box and captcha logo are always hidden.
+Minimap starts hidden. The script is intended to load in light mode for multiple tabs. Turn
+pixelzone sounds off. Bot uses sounds for: Started ok, Captcha, Error (see console, F12).
+Useful console commands:
+listTemplates()
+setCookie("baseTemplateUrl", "")
+<Euzu>: as far as I know, it's not a bot, so you can use it
 */
 
 // Default location of template images and templates.json. Is user input and stored in a cookie.
@@ -88,8 +104,8 @@ function startup() {
     '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
     '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
     '</div><div id="minimap-config" style="line-height:15px;">' +
-    ' <span id="hide-map" style="cursor:pointer;">Esconder' +
-    ' </span> | <span id="follow-mouse" style="cursor:pointer;">Seguir Mouse' +
+    ' <span id="hide-map" style="cursor:pointer;">Hide' +
+    ' </span> | <span id="follow-mouse" style="cursor:pointer;">Follow' +
     ' </span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">&nbsp;+&nbsp;</span>/' +
     ' <span id="zoom-minus" style="cursor:pointer;font-weight:bold;">&nbsp;-&nbsp;</span>' +
     '</div>' +
@@ -245,7 +261,7 @@ function toggleShow(newValue) {
     loadTemplates();
   } else {
     minimap_box.style.display = "none";
-    minimap_text.innerHTML = "Mostrar minimapa";
+    minimap_text.innerHTML = "Show Minimap";
     minimap_text.style.display = "block";
     minimap_text.style.cursor = "pointer";
     document.getElementById("minimap-config").style.display = "none";
