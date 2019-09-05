@@ -6,12 +6,12 @@
 // @description  template
 // @author       meatie
 // @match        https://pixelzone.io/*
-// @homepage     https://github.com/Vasco-Pixel/Pixelzone
+// @homepage     https://github.com/pixelfixinit/TurkeyMap
 // @updateURL    https://raw.githubusercontent.com/pixelfixinit/TurkeyMap/master/minimap_meatie.js
 // @grant        none
 // ==/UserScript==
 /*Based on https://github.com/pixelfixinit/TurkeyMap
-Instruções:
+Instruçoes:
 Copiar e colar em novo script
 Teclas:
 +/- - Aumentar e diminuir o zoom.
@@ -89,7 +89,7 @@ function startup() {
     '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
     '</div><div id="minimap-config" style="line-height:15px;">' +
     ' <span id="hide-map" style="cursor:pointer;">Esconder' +
-    ' </span> | <span id="Seguir Mouse" style="cursor:pointer;">Follow' +
+    ' </span> | <span id="follow-mouse" style="cursor:pointer;">Seguir Mouse' +
     ' </span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">&nbsp;+&nbsp;</span>/' +
     ' <span id="zoom-minus" style="cursor:pointer;font-weight:bold;">&nbsp;-&nbsp;</span>' +
     '</div>' +
